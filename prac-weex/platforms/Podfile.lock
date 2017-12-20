@@ -1,0 +1,19 @@
+PODS:
+  - SocketRocket (0.5.1)
+  - WeexSDK (0.15.1):
+    - SocketRocket
+  - WXDevtool (0.15.3):
+    - WeexSDK
+
+DEPENDENCIES:
+  - WeexSDK
+  - WXDevtool
+
+SPEC CHECKSUMS:
+  SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
+  WeexSDK: 5282685df6d7279213a51a3142b915759f6e3413
+  WXDevtool: 6c837383e778a9442ee500db4069a95be321dac6
+
+PODFILE CHECKSUM: 1e22b745550816b3eebc25f5a501ccad23be12a9
+
+COCOAPODS: 1.3.1
