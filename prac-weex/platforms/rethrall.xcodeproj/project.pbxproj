@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1E294AF8E0319CBB2EBC9D2B /* Pods_rethrall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1281491BA4611695CBE5CD1F /* Pods_rethrall.framework */; };
 		232A8C0E1FE9103300B84F28 /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = 232A8C0D1FE9103300B84F28 /* index.js */; };
+		232A8C101FEB4F9C00B84F28 /* RNViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232A8C0F1FEB4F9C00B84F28 /* RNViewController.swift */; };
 		23BE1AB01FE90633004AB2BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BE1AAF1FE90633004AB2BC /* AppDelegate.swift */; };
 		23BE1AB21FE90633004AB2BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BE1AB11FE90633004AB2BC /* ViewController.swift */; };
 		23BE1AB51FE90633004AB2BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23BE1AB31FE90633004AB2BC /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		1281491BA4611695CBE5CD1F /* Pods_rethrall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rethrall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		232A8C0D1FE9103300B84F28 /* index.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
+		232A8C0F1FEB4F9C00B84F28 /* RNViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNViewController.swift; sourceTree = "<group>"; };
 		23BE1AAC1FE90633004AB2BC /* rethrall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rethrall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23BE1AAF1FE90633004AB2BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23BE1AB11FE90633004AB2BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			children = (
 				23BE1AAF1FE90633004AB2BC /* AppDelegate.swift */,
 				23BE1AB11FE90633004AB2BC /* ViewController.swift */,
+				232A8C0F1FEB4F9C00B84F28 /* RNViewController.swift */,
 				232A8BF21FE90F6600B84F28 /* bundlejs */,
 				23BE1AB31FE90633004AB2BC /* Main.storyboard */,
 				23BE1AB61FE90633004AB2BC /* Assets.xcassets */,
@@ -441,11 +444,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-rethrall/Pods-rethrall-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/React/React.framework",
 				"${BUILT_PRODUCTS_DIR}/SocketRocket/SocketRocket.framework",
+				"${BUILT_PRODUCTS_DIR}/Yoga/yoga.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketRocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/yoga.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -474,6 +481,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				232A8C101FEB4F9C00B84F28 /* RNViewController.swift in Sources */,
 				23BE1AB21FE90633004AB2BC /* ViewController.swift in Sources */,
 				23BE1AB01FE90633004AB2BC /* AppDelegate.swift in Sources */,
 			);

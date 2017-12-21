@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper" @click="update">
     <image :src="logoUrl" class="logo"></image>
-    <text class="title">你wwww {{target}}</text>
+    <text class="title">CCCC {{target}}</text>
     <text class="desc">Now, let's use vue to build your weex app.</text>
   </div>
 </template>
