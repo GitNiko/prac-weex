@@ -10,6 +10,7 @@ import UIKit
 import React
 
 class RNViewController: UIViewController {
+    var nextVCs:[UIViewController] = []
     
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -24,6 +25,28 @@ class RNViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+//        self.navigationController?.present(ViewController(), animated: true, completion: nil)
+//        nextVCs.append(RNViewController())
+//        nextVCs.append(RNViewController())
+//        nextVCs.append(RNViewController())
+//        nextVCs.append(RNViewController())
+//        nextVCs.append(RNViewController())
+//        nextVCs.append(RNViewController())
+//        nextVCs.append(RNViewController())
+//        nextVCs.append(RNViewController())
+//        nextVCs.append(RNViewController())
+//        nextVCs.append(RNViewController())
+//        nextVCs.append(RNViewController())
+//        nextVCs.append(RNViewController())
+//        let tt:UINavigationController = UIApplication.shared.keyWindow?.rootViewController as! UINavigationController
+//        tt.pushViewController(ViewController(), animated: true)
+//        navigationController?.pushViewController(ViewController(), animated: true)
+        self.navigationController?.pushViewController(ViewController(), animated: true)
+        
     }
     
 }

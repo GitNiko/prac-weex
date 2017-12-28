@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         WXAppConfiguration.setAppGroup("NFQ")
         WXAppConfiguration.setAppGroup("rethrall")
         WXAppConfiguration.setAppVersion("1.0.0")
+        WXSDKEngine.registerModule("swifter", with: NSClassFromString("System"))
         
         WXSDKEngine.initSDKEnvironment()
     }
@@ -72,10 +73,11 @@ class ViewController: UIViewController {
             (error:Error!) -> Void in
             print("fail at error: %@", error)
         }
-        let url = Bundle.main.url(forResource: "index", withExtension: "js")
-        instance!.render(with: url, options: ["bundleUrl":String.init(format: "bundlejs/", Bundle.main.bundlePath)], data: nil)
-//        instance.render(with: URL.init(string: "http://192.168.31.108:8088/weex/index.js?_wx_tpl=http%3A%2F%2F192.168.31.108%3A8088%2Fweex%2Findex.js"))
+//        let url = Bundle.main.url(forResource: "index", withExtension: "js")
+//        instance!.render(with: url, options: ["bundleUrl":String.init(format: "bundlejs/", Bundle.main.bundlePath)], data: nil)
+        instance.render(with: URL.init(string: "http://192.168.31.108:9999/js/index.bundle.js?_wx_tpl=http://192.168.31.108:9999/js/index.bundle.js"))
 //        print("sdsd")
+        
     }
 
 

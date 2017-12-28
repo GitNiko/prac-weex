@@ -23,8 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
 //        let rootVC = ViewController()
         let rootVC = RNViewController()
-        self.window?.rootViewController = rootVC
-        
+        let naviVC = UINavigationController(rootViewController: rootVC)
+//        naviVC.setNavigationBarHidden(true, animated: false)
+        self.window?.rootViewController = naviVC
         self.window?.makeKeyAndVisible()
         
         return true
