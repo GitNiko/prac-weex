@@ -45,7 +45,7 @@ class RNViewController: UIViewController {
 //        let tt:UINavigationController = UIApplication.shared.keyWindow?.rootViewController as! UINavigationController
 //        tt.pushViewController(ViewController(), animated: true)
 //        navigationController?.pushViewController(ViewController(), animated: true)
-        self.navigationController?.pushViewController(ViewController(), animated: true)
+//        self.navigationController?.pushViewController(RNViewController(), animated: true)
         
     }
     

@@ -6,13 +6,13 @@
 //  Copyright © 2017年 nongfenqi. All rights reserved.
 //
 
-#ifndef System_h
-#define System_h
+#ifndef NAVIGATION_WX_BRIDGE_H
+#define NAVIGATION_WX_BRIDGE_H
 
 #import <WeexSDK/WeexSDK.h>
 
-@interface System : NSObject <WXModuleProtocol>
+@interface NavigationWXBridge : NSObject <WXModuleProtocol>
 @end
 
 
-#endif /* System_h */
+#endif

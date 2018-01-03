@@ -17,7 +17,8 @@
 		23BE1ABA1FE90633004AB2BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23BE1AB81FE90633004AB2BC /* LaunchScreen.storyboard */; };
 		23BE1AC51FE90634004AB2BC /* rethrallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BE1AC41FE90634004AB2BC /* rethrallTests.swift */; };
 		23BE1AD01FE90634004AB2BC /* rethrallUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BE1ACF1FE90634004AB2BC /* rethrallUITests.swift */; };
-		23ED9B031FF493FF008A8721 /* System.m in Sources */ = {isa = PBXBuildFile; fileRef = 23ED9B021FF493FF008A8721 /* System.m */; };
+		23C4D1341FFCB5E100A80E18 /* NavigationRNBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 23C4D1331FFCB5E100A80E18 /* NavigationRNBridge.m */; };
+		23ED9B031FF493FF008A8721 /* NavigationWXBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 23ED9B021FF493FF008A8721 /* NavigationWXBridge.m */; };
 		23ED9B221FF4D777008A8721 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ED9B211FF4D777008A8721 /* Navigation.swift */; };
 		46C7E1E4049E7C9A3562CF9D /* Pods_rethrallUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB7C0DC1EB7BBB3DB0341C6 /* Pods_rethrallUITests.framework */; };
 		924ED89396A0090A3716DF9E /* Pods_rethrallTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CEF313AC768A2CB2D6B15E0 /* Pods_rethrallTests.framework */; };
@@ -57,9 +58,10 @@
 		23BE1ACB1FE90634004AB2BC /* rethrallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rethrallUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23BE1ACF1FE90634004AB2BC /* rethrallUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rethrallUITests.swift; sourceTree = "<group>"; };
 		23BE1AD11FE90634004AB2BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23C4D1331FFCB5E100A80E18 /* NavigationRNBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationRNBridge.m; sourceTree = "<group>"; };
 		23ED9B011FF493FF008A8721 /* rethrall-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "rethrall-Bridging-Header.h"; sourceTree = "<group>"; };
-		23ED9B021FF493FF008A8721 /* System.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = System.m; sourceTree = "<group>"; };
-		23ED9B041FF49442008A8721 /* System.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = System.h; sourceTree = "<group>"; };
+		23ED9B021FF493FF008A8721 /* NavigationWXBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationWXBridge.m; sourceTree = "<group>"; };
+		23ED9B041FF49442008A8721 /* NavigationWXBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationWXBridge.h; sourceTree = "<group>"; };
 		23ED9B211FF4D777008A8721 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		28DF11BA9FF80D0E16AD7F02 /* Pods-rethrallTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rethrallTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-rethrallTests/Pods-rethrallTests.release.xcconfig"; sourceTree = "<group>"; };
 		37A8D1B6F35338C960E7E66D /* Pods-rethrall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rethrall.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rethrall/Pods-rethrall.debug.xcconfig"; sourceTree = "<group>"; };
@@ -133,8 +135,8 @@
 			isa = PBXGroup;
 			children = (
 				23BE1AAF1FE90633004AB2BC /* AppDelegate.swift */,
-				23ED9B021FF493FF008A8721 /* System.m */,
-				23ED9B041FF49442008A8721 /* System.h */,
+				23C4D1321FFCB5A300A80E18 /* RNBridge */,
+				23C4D1311FFCB3F700A80E18 /* WXBridge */,
 				23BE1AB11FE90633004AB2BC /* ViewController.swift */,
 				23ED9B211FF4D777008A8721 /* Navigation.swift */,
 				232A8C0F1FEB4F9C00B84F28 /* RNViewController.swift */,
@@ -164,6 +166,23 @@
 				23BE1AD11FE90634004AB2BC /* Info.plist */,
 			);
 			path = rethrallUITests;
+			sourceTree = "<group>";
+		};
+		23C4D1311FFCB3F700A80E18 /* WXBridge */ = {
+			isa = PBXGroup;
+			children = (
+				23ED9B021FF493FF008A8721 /* NavigationWXBridge.m */,
+				23ED9B041FF49442008A8721 /* NavigationWXBridge.h */,
+			);
+			path = WXBridge;
+			sourceTree = "<group>";
+		};
+		23C4D1321FFCB5A300A80E18 /* RNBridge */ = {
+			isa = PBXGroup;
+			children = (
+				23C4D1331FFCB5E100A80E18 /* NavigationRNBridge.m */,
+			);
+			path = RNBridge;
 			sourceTree = "<group>";
 		};
 		4B2203D4107A7F1BC514B76D /* Pods */ = {
@@ -492,7 +511,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23ED9B031FF493FF008A8721 /* System.m in Sources */,
+				23C4D1341FFCB5E100A80E18 /* NavigationRNBridge.m in Sources */,
+				23ED9B031FF493FF008A8721 /* NavigationWXBridge.m in Sources */,
 				232A8C101FEB4F9C00B84F28 /* RNViewController.swift in Sources */,
 				23ED9B221FF4D777008A8721 /* Navigation.swift in Sources */,
 				23BE1AB21FE90633004AB2BC /* ViewController.swift in Sources */,

@@ -8,23 +8,21 @@
 
 #import <Foundation/Foundation.h>
 #import <React/RCTBridgeModule.h>
-#import "System.h"
+#import "NavigationWXBridge.h"
 #import "rethrall-Swift.h"
 // weex
-@implementation System
+@implementation NavigationWXBridge
 @synthesize weexInstance;
 WX_EXPORT_METHOD(@selector(naviPop:callback:))
 
 - (void)naviPop:(NSString*)url callback:(WXModuleCallback)callback
 {
     NSLog(url);
-    [Navigaition pop];
+    [Navigation pop:nil];
 }
 
 @end
 
-// react native
-@interface RCT_EXTERN_MODULE(Navigation, NSObject)
-RCT_EXTERN_METHOD(pop)
-@end
+
+
 

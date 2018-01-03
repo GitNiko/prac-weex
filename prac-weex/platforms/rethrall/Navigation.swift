@@ -8,10 +8,15 @@
 
 import Foundation
 
-@objc(Navigaition)
-class Navigaition: NSObject {
-    @objc static func pop() -> Void {
+@objc(Navigation)
+class Navigation: NSObject {
+    @objc static func pop(_ dict: NSDictionary) -> Void {
         let navi = UIApplication.shared.keyWindow?.rootViewController as! UINavigationController
         navi.popViewController(animated: true)
+    }
+    
+    @objc static func push(_ param:String) -> Void {
+        let navi = UIApplication.shared.keyWindow?.rootViewController as! UINavigationController
+        navi.pushViewController(RNViewController(), animated: true)
     }
 }

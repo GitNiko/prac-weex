@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         WXAppConfiguration.setAppGroup("NFQ")
         WXAppConfiguration.setAppGroup("rethrall")
         WXAppConfiguration.setAppVersion("1.0.0")
-        WXSDKEngine.registerModule("swifter", with: NSClassFromString("System"))
+        WXSDKEngine.registerModule("swifter", with: NSClassFromString("NavigationWXBridge"))
         
         WXSDKEngine.initSDKEnvironment()
     }
