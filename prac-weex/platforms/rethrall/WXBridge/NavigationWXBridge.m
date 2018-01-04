@@ -18,10 +18,11 @@ WX_EXPORT_METHOD(@selector(naviPop:callback:))
 - (void)naviPop:(NSString*)url callback:(WXModuleCallback)callback
 {
     NSLog(url);
-    [Navigation pop:nil];
+//    [Navigation pop:nil];
 }
 
 @end
+
 
 
 

@@ -59,6 +59,7 @@
 		23BE1ACF1FE90634004AB2BC /* rethrallUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rethrallUITests.swift; sourceTree = "<group>"; };
 		23BE1AD11FE90634004AB2BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23C4D1331FFCB5E100A80E18 /* NavigationRNBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationRNBridge.m; sourceTree = "<group>"; };
+		23C4D19D1FFE0CF200A80E18 /* NavigationRNBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationRNBridge.h; sourceTree = "<group>"; };
 		23ED9B011FF493FF008A8721 /* rethrall-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "rethrall-Bridging-Header.h"; sourceTree = "<group>"; };
 		23ED9B021FF493FF008A8721 /* NavigationWXBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationWXBridge.m; sourceTree = "<group>"; };
 		23ED9B041FF49442008A8721 /* NavigationWXBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationWXBridge.h; sourceTree = "<group>"; };
@@ -181,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				23C4D1331FFCB5E100A80E18 /* NavigationRNBridge.m */,
+				23C4D19D1FFE0CF200A80E18 /* NavigationRNBridge.h */,
 			);
 			path = RNBridge;
 			sourceTree = "<group>";
@@ -692,7 +694,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "rethrall/rethrall-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -710,7 +712,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nongfenqi.rethrall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "rethrall/rethrall-Bridging-Header.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
