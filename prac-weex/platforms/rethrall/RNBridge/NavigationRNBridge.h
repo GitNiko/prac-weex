@@ -9,9 +9,10 @@
 #ifndef NavigationRNBridge_h
 #define NavigationRNBridge_h
 #import <React/RCTBridgeModule.h>
+#import <React/RCTEventEmitter.h>
 #import "rethrall-Swift.h"
 
-@interface NavigationRNBridge : NSObject<RCTBridgeModule>
+@interface NavigationRNBridge : RCTEventEmitter<RCTBridgeModule>
 + (void)pop;
 + (void)push;
 @end

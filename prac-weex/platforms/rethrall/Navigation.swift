@@ -12,18 +12,42 @@ import Foundation
 class Navigation: NSObject {
     
     @objc
-    static func pop(_ dict: NSDictionary) -> Void {
+    static func pop(_ dict: NSDictionary, _ animated: Bool = true) -> Void {
         let navi = UIApplication.shared.keyWindow?.rootViewController as! UINavigationController
         DispatchQueue.main.async {
-            navi.popViewController(animated: true)
+            navi.popViewController(animated: animated)
         }
     }
     
-    @objc static func push(_ param:String) -> Void {
-        let navi = UIApplication.shared.keyWindow?.rootViewController as! UINavigationController
+    @objc static func push(_ param:String, requestCode:String, animated: Bool = true) -> Void {
         DispatchQueue.main.async {
-            navi.pushViewController(RNViewController(), animated: true)
-            navi.present(UIViewController, animated: <#T##Bool#>, completion: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>)
+            let navi = UIApplication.shared.keyWindow?.rootViewController as! UINavigationController
+            let nextVC = RNViewController()
+            nextVC.requestCode = requestCode
+            navi.pushViewController(nextVC, animated: animated)
+//            navi.present(UIViewController, animated: , completion: {
+//                <#code#>
+//            })
+        }
+    }
+    
+    @objc static func getPrevVCRequestCode() -> String {
+        let navi = UIApplication.shared.keyWindow?.rootViewController as! UINavigationController
+        if navi.viewControllers.count > 1 {
+            let prevVC = navi.viewControllers[navi.viewControllers.count - 1] as! RNViewController
+            return prevVC.requestCode
+        } else {
+            return ""
+        }
+    }
+    
+    @objc static func getLastVCRequestCode() -> String {
+        let navi = UIApplication.shared.keyWindow?.rootViewController as! UINavigationController
+        if navi.viewControllers.count > 1 {
+            let lastVC = navi.topViewController as! RNViewController
+            return lastVC.requestCode
+        } else {
+            return ""
         }
     }
 }

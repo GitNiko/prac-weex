@@ -11,6 +11,7 @@ import React
 
 class RNViewController: UIViewController {
     var nextVCs:[UIViewController] = []
+    var requestCode:String = ""
     
     init() {
         super.init(nibName: nil, bundle: nil)
