@@ -7,23 +7,23 @@
 //
 
 import Foundation
+import React
 
 @objc(Navigation)
 class Navigation: NSObject {
     
     @objc
-    static func pop(_ dict: NSDictionary, _ animated: Bool = true) -> Void {
+    static func pop(_ dict: NSDictionary, animated: Bool = true) -> Void {
         let navi = UIApplication.shared.keyWindow?.rootViewController as! UINavigationController
         DispatchQueue.main.async {
             navi.popViewController(animated: animated)
         }
     }
     
-    @objc static func push(_ param:String, requestCode:String, animated: Bool = true) -> Void {
+    @objc static func push(_ param:String, animated: Bool = true) -> Void {
         DispatchQueue.main.async {
             let navi = UIApplication.shared.keyWindow?.rootViewController as! UINavigationController
             let nextVC = RNViewController()
-            nextVC.requestCode = requestCode
             navi.pushViewController(nextVC, animated: animated)
 //            navi.present(UIViewController, animated: , completion: {
 //                <#code#>
@@ -49,5 +49,9 @@ class Navigation: NSObject {
         } else {
             return ""
         }
+    }
+    
+    @objc static func openUri(_ uri:String, resolve:RCTPromiseResolveBlock, reject:RCTPromiseResolveBlock) {
+        resolve("test")
     }
 }
