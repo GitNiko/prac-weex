@@ -11,47 +11,42 @@ import React
 
 @objc(Navigation)
 class Navigation: NSObject {
-    
-    @objc
-    static func pop(_ dict: NSDictionary, animated: Bool = true) -> Void {
-        let navi = UIApplication.shared.keyWindow?.rootViewController as! UINavigationController
-        DispatchQueue.main.async {
-            navi.popViewController(animated: animated)
-        }
-    }
-    
-    @objc static func push(_ param:String, animated: Bool = true) -> Void {
+    @objc func openUri(_ intent:NSDictionary, resolve:@escaping RCTPromiseResolveBlock, reject:@escaping RCTPromiseRejectBlock) {
+        // intent 需要放进下一个VC中
         DispatchQueue.main.async {
             let navi = UIApplication.shared.keyWindow?.rootViewController as! UINavigationController
-            let nextVC = RNViewController()
-            navi.pushViewController(nextVC, animated: animated)
-//            navi.present(UIViewController, animated: , completion: {
-//                <#code#>
-//            })
+        
+            let uri = intent.value(forKey: "uri") as! String
+            let nextVC = RNViewController(uri:uri)
+            nextVC.mReject = reject
+            nextVC.mResolve = resolve
+            nextVC.mIntent = intent
+            navi.pushViewController(nextVC, animated: true)
+            
         }
     }
     
-    @objc static func getPrevVCRequestCode() -> String {
+    @objc func setResult(_ data:NSDictionary) {
+        DispatchQueue.main.async {
+            let currentVC = self.getCurrentVC() as! RNViewController
+            if let resolve = currentVC.mResolve {
+                resolve(data)
+            }
+            
+            currentVC.navigationController?.popViewController(animated: true)
+        }
+    }
+    
+    @objc func getIntent(_ resolve:@escaping RCTPromiseResolveBlock, reject:@escaping RCTPromiseRejectBlock) {
+        DispatchQueue.main.async {
+            let currentVC = self.getCurrentVC() as! RNViewController
+            resolve(currentVC.mIntent)
+        }
+    }
+    
+    func getCurrentVC() -> UIViewController? {
         let navi = UIApplication.shared.keyWindow?.rootViewController as! UINavigationController
-        if navi.viewControllers.count > 1 {
-            let prevVC = navi.viewControllers[navi.viewControllers.count - 1] as! RNViewController
-            return prevVC.requestCode
-        } else {
-            return ""
-        }
+        return navi.topViewController
     }
     
-    @objc static func getLastVCRequestCode() -> String {
-        let navi = UIApplication.shared.keyWindow?.rootViewController as! UINavigationController
-        if navi.viewControllers.count > 1 {
-            let lastVC = navi.topViewController as! RNViewController
-            return lastVC.requestCode
-        } else {
-            return ""
-        }
-    }
-    
-    @objc static func openUri(_ uri:String, resolve:RCTPromiseResolveBlock, reject:RCTPromiseResolveBlock) {
-        resolve("test")
-    }
 }

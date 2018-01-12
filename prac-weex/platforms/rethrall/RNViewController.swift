@@ -10,12 +10,15 @@ import UIKit
 import React
 
 class RNViewController: UIViewController {
-    var nextVCs:[UIViewController] = []
-    var requestCode:String = ""
+    var nextVCs: [UIViewController] = []
+    var requestCode: String = ""
+    var mResolve: RCTPromiseResolveBlock?
+    var mReject: RCTPromiseRejectBlock?
+    var mIntent: NSDictionary = NSDictionary()
     
-    init() {
+    init(uri:String) {
         super.init(nibName: nil, bundle: nil)
-        let jsCodeLocation = URL(string: "http://192.168.31.108:8081/index.ios.bundle?platform=ios&dev=true")
+        let jsCodeLocation = URL(string: uri)
         let rootView = RCTRootView(bundleURL: jsCodeLocation, moduleName: "Thrall", initialProperties: nil, launchOptions: nil)
         self.view = rootView
     }
@@ -30,24 +33,7 @@ class RNViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-//        self.navigationController?.present(ViewController(), animated: true, completion: nil)
-//        nextVCs.append(RNViewController())
-//        nextVCs.append(RNViewController())
-//        nextVCs.append(RNViewController())
-//        nextVCs.append(RNViewController())
-//        nextVCs.append(RNViewController())
-//        nextVCs.append(RNViewController())
-//        nextVCs.append(RNViewController())
-//        nextVCs.append(RNViewController())
-//        nextVCs.append(RNViewController())
-//        nextVCs.append(RNViewController())
-//        nextVCs.append(RNViewController())
-//        nextVCs.append(RNViewController())
-//        let tt:UINavigationController = UIApplication.shared.keyWindow?.rootViewController as! UINavigationController
-//        tt.pushViewController(ViewController(), animated: true)
-//        navigationController?.pushViewController(ViewController(), animated: true)
-//        self.navigationController?.pushViewController(RNViewController(), animated: true)
-        
     }
+    
     
 }
