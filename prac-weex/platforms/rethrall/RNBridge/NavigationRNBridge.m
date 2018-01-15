@@ -2,6 +2,8 @@
 
 @interface RCT_EXTERN_MODULE(Navigation, NSObject)
 
+
+
 RCT_EXTERN_METHOD(openUri:(NSDictionary *)intent resolve:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject)
 
 RCT_EXTERN_METHOD(setResult:(NSDictionary *)data)
