@@ -29,26 +29,6 @@
       language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "23BE1ABF1FE90634004AB2BC"
-               BuildableName = "rethrallTests.xctest"
-               BlueprintName = "rethrallTests"
-               ReferencedContainer = "container:rethrall.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "23BE1ACA1FE90634004AB2BC"
-               BuildableName = "rethrallUITests.xctest"
-               BlueprintName = "rethrallUITests"
-               ReferencedContainer = "container:rethrall.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

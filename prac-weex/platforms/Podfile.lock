@@ -1,4 +1,6 @@
 PODS:
+  - React (0.44.3):
+    - React/Core (= 0.44.3)
   - React/Core (0.44.3):
     - React/cxxreact
     - Yoga (= 0.44.3.React)
@@ -17,6 +19,8 @@ PODS:
     - React/Core
   - React/RCTWebSocket (0.44.3):
     - React/Core
+  - RNFS (2.9.7):
+    - React
   - SocketRocket (0.5.1)
   - WeexSDK (0.15.1):
     - SocketRocket
@@ -31,6 +35,7 @@ DEPENDENCIES:
   - React/RCTNetwork (from `../../tok/node_modules/react-native`)
   - React/RCTText (from `../../tok/node_modules/react-native`)
   - React/RCTWebSocket (from `../../tok/node_modules/react-native`)
+  - RNFS (from `../../tok/node_modules/react-native-fs`)
   - WeexSDK
   - WXDevtool
   - Yoga (from `../../tok/node_modules/react-native/ReactCommon/yoga`)
@@ -38,16 +43,19 @@ DEPENDENCIES:
 EXTERNAL SOURCES:
   React:
     :path: ../../tok/node_modules/react-native
+  RNFS:
+    :path: ../../tok/node_modules/react-native-fs
   Yoga:
     :path: ../../tok/node_modules/react-native/ReactCommon/yoga
 
 SPEC CHECKSUMS:
   React: 6361345ebeb769a929e10a06baf0c868d6d03ad5
+  RNFS: c44a045cb06c6a496a27f37bd1b50f2c36422cf3
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
   WeexSDK: 5282685df6d7279213a51a3142b915759f6e3413
   WXDevtool: 6c837383e778a9442ee500db4069a95be321dac6
   Yoga: c90474ca3ec1edba44c97b6c381f03e222a9e287
 
-PODFILE CHECKSUM: 4ef6e8d5808743aebb1163a4378e8b0b518e2d9b
+PODFILE CHECKSUM: cb8314538a0e9ac2a142482910d58539ef78c78e
 
 COCOAPODS: 1.3.1

@@ -44,9 +44,21 @@ class Navigation: NSObject {
         }
     }
     
+    @objc func registFont(_ filePath:String) -> Bool {
+        guard let provider = CGDataProvider(filename: filePath) else {
+            return false
+        }
+        
+        let font = CGFont(provider)
+        let result = CTFontManagerRegisterGraphicsFont(font, nil)
+        return result
+    }
+    
     func getCurrentVC() -> UIViewController? {
         let navi = UIApplication.shared.keyWindow?.rootViewController as! UINavigationController
         return navi.topViewController
     }
+    
+    
     
 }

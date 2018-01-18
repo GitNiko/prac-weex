@@ -43,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		1281491BA4611695CBE5CD1F /* Pods_rethrall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rethrall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		23091D062010929900A53F08 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		232A8C0D1FE9103300B84F28 /* index.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
 		232A8C0F1FEB4F9C00B84F28 /* RNViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNViewController.swift; sourceTree = "<group>"; };
 		23BE1AAC1FE90633004AB2BC /* rethrall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rethrall.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				23BE1AAF1FE90633004AB2BC /* AppDelegate.swift */,
+				23091D062010929900A53F08 /* iconfont.ttf */,
 				23C4D1321FFCB5A300A80E18 /* RNBridge */,
 				23C4D1311FFCB3F700A80E18 /* WXBridge */,
 				23BE1AB11FE90633004AB2BC /* ViewController.swift */,
@@ -474,12 +476,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-rethrall/Pods-rethrall-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RNFS/RNFS.framework",
 				"${BUILT_PRODUCTS_DIR}/React/React.framework",
 				"${BUILT_PRODUCTS_DIR}/SocketRocket/SocketRocket.framework",
 				"${BUILT_PRODUCTS_DIR}/Yoga/yoga.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RNFS.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketRocket.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/yoga.framework",

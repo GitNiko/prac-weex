@@ -22,6 +22,9 @@ target 'rethrall' do
   # 如果你的RN版本 >= 0.42.0，请加入下面这行
   pod "Yoga", :path => "../../tok/node_modules/react-native/ReactCommon/yoga"
   
+#  pod 'react-native-image-picker', :path => "../../tok/node_modules/react-native-image-picker/"
+  pod 'RNFS', :path => "../../tok/node_modules/react-native-fs"
+
   target 'rethrallTests' do
     inherit! :search_paths
     # Pods for testing
