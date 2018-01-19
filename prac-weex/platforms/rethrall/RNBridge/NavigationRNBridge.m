@@ -10,5 +10,8 @@ RCT_EXTERN_METHOD(setResult:(NSDictionary *)data)
 
 RCT_EXTERN_METHOD(getIntent:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject)
 
+RCT_EXTERN_METHOD(registFont:(NSString *)filePath)
+
+
 
 @end

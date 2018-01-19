@@ -50,6 +50,10 @@ class Navigation: NSObject {
         }
         
         let font = CGFont(provider)
+        if let fc = CGFont.init(NSString.init(string: "iconfont.ttf")) {
+            _ = CTFontManagerUnregisterGraphicsFont(fc, nil)
+        }
+//        let result = CTFontManagerRegisterFontsForURL(path, CTFontManagerScope.process, nil)
         let result = CTFontManagerRegisterGraphicsFont(font, nil)
         return result
     }
