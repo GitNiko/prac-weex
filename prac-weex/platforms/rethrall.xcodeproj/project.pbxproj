@@ -10,6 +10,11 @@
 		1E294AF8E0319CBB2EBC9D2B /* Pods_rethrall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1281491BA4611695CBE5CD1F /* Pods_rethrall.framework */; };
 		232A8C0E1FE9103300B84F28 /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = 232A8C0D1FE9103300B84F28 /* index.js */; };
 		232A8C101FEB4F9C00B84F28 /* RNViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232A8C0F1FEB4F9C00B84F28 /* RNViewController.swift */; };
+		2335C2AD201C73B700AAD647 /* RNBridgeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2335C2AC201C73B700AAD647 /* RNBridgeDelegate.swift */; };
+		2335C2AF2020161600AAD647 /* base.bundle.js in Resources */ = {isa = PBXBuildFile; fileRef = 2335C2AE2020161600AAD647 /* base.bundle.js */; };
+		2335C2B12020161D00AAD647 /* business.bundle.js in Resources */ = {isa = PBXBuildFile; fileRef = 2335C2B02020161D00AAD647 /* business.bundle.js */; };
+		2335C2B22024391000AAD647 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23091D062010929900A53F08 /* iconfont.ttf */; };
+		2335C2B7202440AC00AAD647 /* CommonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2335C2B6202440AC00AAD647 /* CommonUtils.swift */; };
 		23BE1AB01FE90633004AB2BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BE1AAF1FE90633004AB2BC /* AppDelegate.swift */; };
 		23BE1AB21FE90633004AB2BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BE1AB11FE90633004AB2BC /* ViewController.swift */; };
 		23BE1AB51FE90633004AB2BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23BE1AB31FE90633004AB2BC /* Main.storyboard */; };
@@ -46,6 +51,10 @@
 		23091D062010929900A53F08 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		232A8C0D1FE9103300B84F28 /* index.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
 		232A8C0F1FEB4F9C00B84F28 /* RNViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNViewController.swift; sourceTree = "<group>"; };
+		2335C2AC201C73B700AAD647 /* RNBridgeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNBridgeDelegate.swift; sourceTree = "<group>"; };
+		2335C2AE2020161600AAD647 /* base.bundle.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = base.bundle.js; sourceTree = SOURCE_ROOT; };
+		2335C2B02020161D00AAD647 /* business.bundle.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = business.bundle.js; sourceTree = SOURCE_ROOT; };
+		2335C2B6202440AC00AAD647 /* CommonUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUtils.swift; sourceTree = "<group>"; };
 		23BE1AAC1FE90633004AB2BC /* rethrall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rethrall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23BE1AAF1FE90633004AB2BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23BE1AB11FE90633004AB2BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,9 +114,19 @@
 		232A8BF21FE90F6600B84F28 /* bundlejs */ = {
 			isa = PBXGroup;
 			children = (
+				2335C2AE2020161600AAD647 /* base.bundle.js */,
 				232A8C0D1FE9103300B84F28 /* index.js */,
+				2335C2B02020161D00AAD647 /* business.bundle.js */,
 			);
 			path = bundlejs;
+			sourceTree = "<group>";
+		};
+		2335C2B32024402700AAD647 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				2335C2B6202440AC00AAD647 /* CommonUtils.swift */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 		23BE1AA31FE90633004AB2BC = {
@@ -135,6 +154,7 @@
 		23BE1AAE1FE90633004AB2BC /* rethrall */ = {
 			isa = PBXGroup;
 			children = (
+				2335C2B32024402700AAD647 /* utils */,
 				23BE1AAF1FE90633004AB2BC /* AppDelegate.swift */,
 				23091D062010929900A53F08 /* iconfont.ttf */,
 				23C4D1321FFCB5A300A80E18 /* RNBridge */,
@@ -142,6 +162,7 @@
 				23BE1AB11FE90633004AB2BC /* ViewController.swift */,
 				23ED9B211FF4D777008A8721 /* Navigation.swift */,
 				232A8C0F1FEB4F9C00B84F28 /* RNViewController.swift */,
+				2335C2AC201C73B700AAD647 /* RNBridgeDelegate.swift */,
 				232A8BF21FE90F6600B84F28 /* bundlejs */,
 				23BE1AB31FE90633004AB2BC /* Main.storyboard */,
 				23BE1AB61FE90633004AB2BC /* Assets.xcassets */,
@@ -327,7 +348,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2335C2B22024391000AAD647 /* iconfont.ttf in Resources */,
 				23BE1ABA1FE90633004AB2BC /* LaunchScreen.storyboard in Resources */,
+				2335C2B12020161D00AAD647 /* business.bundle.js in Resources */,
+				2335C2AF2020161600AAD647 /* base.bundle.js in Resources */,
 				23BE1AB71FE90633004AB2BC /* Assets.xcassets in Resources */,
 				23BE1AB51FE90633004AB2BC /* Main.storyboard in Resources */,
 				232A8C0E1FE9103300B84F28 /* index.js in Resources */,
@@ -515,11 +539,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2335C2AD201C73B700AAD647 /* RNBridgeDelegate.swift in Sources */,
 				23C4D1341FFCB5E100A80E18 /* NavigationRNBridge.m in Sources */,
 				23ED9B031FF493FF008A8721 /* NavigationWXBridge.m in Sources */,
 				232A8C101FEB4F9C00B84F28 /* RNViewController.swift in Sources */,
 				23ED9B221FF4D777008A8721 /* Navigation.swift in Sources */,
 				23BE1AB21FE90633004AB2BC /* ViewController.swift in Sources */,
+				2335C2B7202440AC00AAD647 /* CommonUtils.swift in Sources */,
 				23BE1AB01FE90633004AB2BC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.backgroundColor = UIColor.white
         
 //        let rootVC = ViewController()
-        let rootVC = RNViewController(uri:"http://192.168.31.108:8081/index.ios.bundle?platform=ios&dev=true")
+        let rootVC = RNViewController(wholeBundleUri:URL.init(string: "ssss")!)
         let naviVC = UINavigationController(rootViewController: rootVC)
 //        naviVC.setNavigationBarHidden(true, animated: false)
         self.window?.rootViewController = naviVC
