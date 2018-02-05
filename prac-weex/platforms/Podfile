@@ -4,7 +4,8 @@ source 'https://github.com/CocoaPods/Specs.git'
 target 'rethrall' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-
+  pod 'SwiftyJSON'
+  
   pod 'WeexSDK'
   pod  'WXDevtool'
   # 'node_modules'目录一般位于根目录中

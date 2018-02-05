@@ -7,10 +7,16 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 enum CachedDirectory: String {
     case Bundle = "/bundle"
     case IconFont = "/iconfont"
+}
+
+enum UrlOfConstans: String {
+    case IconFont = "www"
+    case Scheme = "sds"
 }
 
 
@@ -43,9 +49,18 @@ func exist(path: String) -> Bool {
     return fm.fileExists(atPath: path)
 }
 
-func getAppScheme() -> Void {
-    if let url = NSURL.init(string: "http://localhost:8080.org/app") {
-        URLSession.shared.data
+func getAppScheme(completionhandler ch: (_ res: JSON) -> Void) -> Void {
+    if let url = URL.init(string: "https://apigalen.nongfenqi.net/region/tree?treeCount=1") {
+        URLSession.shared.dataTask(with: url, completionHandler: { (data, res, error) in
+            if(error != nil) {
+                NSLog("get app scheme error: %s", error.debugDescription)
+            } else {
+                let json = JSON(data)
+                ch(json)
+                print(json["retCode"].int)
+            }
+            print("sdsd")
+        }).resume()
     }
 }
 

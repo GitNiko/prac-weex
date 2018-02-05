@@ -21,6 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.backgroundColor = UIColor.white
         
+        getAppScheme(completionhandler: {(res) in 
+            print("ksjdkj")
+        })
 //        let rootVC = ViewController()
         let rootVC = RNViewController(wholeBundleUri:URL.init(string: "ssss")!)
         let naviVC = UINavigationController(rootViewController: rootVC)
